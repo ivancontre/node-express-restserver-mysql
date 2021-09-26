@@ -1,0 +1,4 @@
+sequelize
+express
+typescript
+nodejs

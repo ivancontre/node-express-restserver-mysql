@@ -14,14 +14,14 @@ export default class Server {
         this.app = express();
         this.port = process.env.PORT || '8080';
         
-        // Routes
-        this.routes();
-
         // Conexión a BD
         this.connectToDB()
 
         // Middlewares
         this.middlewares();
+        
+        // Routes
+        this.routes();
     }
 
     routes() {

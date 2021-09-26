@@ -2,9 +2,10 @@ import { Sequelize } from 'sequelize';
 
 const db = new Sequelize('demodb', 'test', '123456', {
     host: 'localhost',
-    //port: 3306,
     dialect: 'mysql',
-    //dialectModule: tedious,
+    define: {
+        freezeTableName: true //prevent sequelize from pluralizing table names
+    },
     //logging: true
 });
 
